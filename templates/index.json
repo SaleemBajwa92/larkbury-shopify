@@ -1,0 +1,269 @@
+{
+  "sections": {
+    "bdec9059-20ce-4656-a4cc-589389b02708": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/The_Black_Friday_Event_ExtendedDesktop_double.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "ae862d5a-9a42-4cde-8ce2-5bc9247d7dad": {
+      "type": "My-colum",
+      "blocks": {
+        "template--17137559634166__ae862d5a-9a42-4cde-8ce2-5bc9247d7dad-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Living-Room-Shop-by-Room.webp",
+            "textid": "Living Room"
+          }
+        },
+        "template--17137559634166__ae862d5a-9a42-4cde-8ce2-5bc9247d7dad-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Dining-Room-Shop-by-Room.webp",
+            "textid": "Dining Room"
+          }
+        },
+        "58629f34-0e5d-4a62-a339-25b9b1e8378d": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bedroom-Shop-by-Room.webp",
+            "textid": "Bed Room"
+          }
+        },
+        "44ea7497-7a0e-49cc-9736-cf90c531fa4c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Office-Shop-by-Room.webp",
+            "textid": "Office"
+          }
+        },
+        "d9a84428-45e1-4dc3-ac04-10e2983708dc": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hallway-Shop-by-Room.webp",
+            "textid": "Hallway"
+          }
+        },
+        "7b1a6a39-51c6-4765-8c81-049c655b571a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outdoor-Shop-by-Room.webp",
+            "textid": "Outdoor"
+          }
+        }
+      },
+      "block_order": [
+        "template--17137559634166__ae862d5a-9a42-4cde-8ce2-5bc9247d7dad-slide-1",
+        "template--17137559634166__ae862d5a-9a42-4cde-8ce2-5bc9247d7dad-slide-2",
+        "58629f34-0e5d-4a62-a339-25b9b1e8378d",
+        "44ea7497-7a0e-49cc-9736-cf90c531fa4c",
+        "d9a84428-45e1-4dc3-ac04-10e2983708dc",
+        "7b1a6a39-51c6-4765-8c81-049c655b571a"
+      ],
+      "settings": {
+        "title": "Shop By",
+        "vertical_alignment": "left",
+        "font_size": 17
+      }
+    },
+    "6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Cushion Boutique",
+            "heading_size": "h2"
+          }
+        },
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our expansive cushion boutique presents a luxury collection of designer fabrics, meticulously handcrafted by our skilled artisans. All proceeds from cushions bought in our showroom contributes to our philanthropic commitment with Tomorrow's Hope. <\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/collections",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-heading-1",
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-text-1",
+        "template--17137559634166__6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Cushion_Boutique_Callout_Block.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1e486e01-e063-4af1-a14c-3a5218fb638a": {
+      "type": "My-colum",
+      "blocks": {
+        "template--17137559634166__1e486e01-e063-4af1-a14c-3a5218fb638a-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outdoor-Shop-by-Room.webp",
+            "textid": "room"
+          }
+        },
+        "template--17137559634166__1e486e01-e063-4af1-a14c-3a5218fb638a-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hallway-Shop-by-Room.webp",
+            "textid": "I am section"
+          }
+        },
+        "7bcd0f4f-6f98-4755-994b-bc38672169e4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hallway-Shop-by-Room.webp",
+            "textid": "I am section"
+          }
+        },
+        "981d19de-8178-457e-95c1-73f4edc466ab": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bedroom-Shop-by-Room.webp",
+            "textid": "I am section"
+          }
+        },
+        "6c836b21-76d3-44b1-949f-d8868243745e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bedroom-Shop-by-Room.webp",
+            "textid": "I am section"
+          }
+        },
+        "4657a821-1f5f-4cd5-a83c-36a347929689": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Hallway-Shop-by-Room.webp",
+            "textid": "I am section"
+          }
+        }
+      },
+      "block_order": [
+        "template--17137559634166__1e486e01-e063-4af1-a14c-3a5218fb638a-slide-1",
+        "template--17137559634166__1e486e01-e063-4af1-a14c-3a5218fb638a-slide-2",
+        "7bcd0f4f-6f98-4755-994b-bc38672169e4",
+        "981d19de-8178-457e-95c1-73f4edc466ab",
+        "6c836b21-76d3-44b1-949f-d8868243745e",
+        "4657a821-1f5f-4cd5-a83c-36a347929689"
+      ],
+      "settings": {
+        "title": "hello",
+        "vertical_alignment": "left",
+        "font_size": 16
+      }
+    },
+    "474fa5d3-8166-4766-a84e-7b90744915ed": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-heading-1",
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-text-1",
+        "template--17137559634166__474fa5d3-8166-4766-a84e-7b90744915ed-button-1"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured-collection-0": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "subtitle",
+        "collection": "automated-collection",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": true,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    }
+  },
+  "order": [
+    "bdec9059-20ce-4656-a4cc-589389b02708",
+    "ae862d5a-9a42-4cde-8ce2-5bc9247d7dad",
+    "6fa6aff5-8b4e-44bd-a3f4-730d97f01bdf",
+    "1e486e01-e063-4af1-a14c-3a5218fb638a",
+    "474fa5d3-8166-4766-a84e-7b90744915ed",
+    "featured-collection-0"
+  ]
+}

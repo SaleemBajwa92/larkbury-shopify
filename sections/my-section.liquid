@@ -1,0 +1,62 @@
+<div style="text-align:{{ section.settings.vertical_alignment }};">
+  <h2 style="font-size:{{ section.settings.font_size }}px">
+    {{ section.settings.textid }}
+  </h2>
+</div>
+{% schema %}
+  {
+    "name": "my section",
+    "settings": [
+      {
+        "type":"text",
+        "id":"textid",
+        "label":"textfield",
+        "default":"I am section"
+      },
+   {
+  "type": "select",
+  "id": "vertical_alignment",
+  "label": "text alignment",
+  "options": [
+    {
+      "value": "left",
+      "label": "left"
+    },
+    {
+      "value": "center",
+      "label": "center"
+    },
+    {
+      "value": "right",
+      "label": "right"
+    }
+  ],
+  "default": "left"
+},
+      {
+  "type": "range",
+  "id": "font_size",
+  "min": 12,
+  "max": 24,
+  "step": 1,
+  "unit": "px",
+  "label": "Font size",
+  "default": 16
+}
+
+    ],
+    "presets":[
+    {
+      "name":"my-text",
+      "category":"text"
+    }
+    ]
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
