@@ -1,360 +1,147 @@
-<!-- Main menu -->
-{% for link in linklists['main-menu'].links -%}
-  {{ link.title | link_to: link.url }}
-{%- endfor %}
+<div class="pointeger-menu">
+  <nav class="menu-nav">
+    <ul class="nav-list">
+      {% for menu in linklists['main-menu'].links -%}
+        <li class="list-items">
+          <span class="link-wrapper">
+            <a href="{{menu.url}}" style="font-size:{{ section.settings.font_size }}px;">{{ menu.title }}</a>
+            {%- if menu.levels > 0 -%}
+              {% render 'icon-caret' %}
+            {%- endif -%}
+          </span>
+          {%- if menu.levels > 0 -%}
+            <div class="drop-down">
+              <ul class="nav-item-level-2">
+                {%- for child in menu.links %}
+                  <li class="list-items-level-2">
+                    <span class="link-wrapper">
+                      <a href="{{child.url}}">
+                        {{ child.title }}
+                      </a>
+                      {%- if child.levels > 0 -%}
+                        {% render 'icon-caret' %}
+                      {%- endif -%}
+                    </span>
+                    <ul class="nav-item-level-3">
+                      {%- for grandchild in child.links -%}
+                        <li class="list-items-level-3">
+                          <a href="{{grandchild.url}}">{{ grandchild.title }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </li>
+                {%- endfor -%}
+              </ul>
+              {%- for block in blocks.section -%}
+                <div>
+                  <img
+                    src="{{ block.settings.image | img_url: '400x300' }}"
+                    width="100%"
+                    height="85%">
+                  <p style="font-size:{{ section.settings.font_size }}px">{{ block.settings.textid }}</p>
+                </div>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</div>
 
 {% schema %}
-{
-  "name": "nav-bar",
-  "tag": "section",
-  "class": "nav-bar",
-  "limit": 2,
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "navbar"
-    },
+  {
+    "name": "nav-bar",
+    "tag": "section",
+    "class": "nav-bar",
+    "limit": 2,
+    "settings": [
       {
-       "type": "select",
-       "id": "vertical_alignment",
-       "label": "text alignment",
-       "options": [
-    {
-      "value": "left",
-      "label": "left"
-    },
-    {
-      "value": "center",
-      "label": "center"
-    },
-    {
-      "value": "right",
-      "label": "right"
-    }
-  ],
-  "default": "left"
-},
+        "type": "text",
+        "id": "title",
+        "label": "navbar"
+      }, {
+        "type": "select",
+        "id": "vertical_alignment",
+        "label": "text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "left"
+          }, {
+            "value": "center",
+            "label": "center"
+          }, {
+            "value": "right",
+            "label": "right"
+          }
+        ],
+        "default": "left"
+      }, {
+        "type": "range",
+        "id": "font_size",
+        "min": 12,
+        "max": 24,
+        "step": 1,
+        "unit": "px",
+        "label": "Font size",
+        "default": 16
+      }
+    ],
+    "max_blocks": 30,
+    "blocks": [
       {
-  "type": "range",
-  "id": "font_size",
-  "min": 12,
-  "max": 24,
-  "step": 1,
-  "unit": "px",
-  "label": "Font size",
-  "default": 16
-}
-  ],
-  "max_blocks": 30,
-  "blocks": [
-     {
-       "name": "Slide",
-       "type": "slide",
-       "settings": [
-         {
-           "type": "image_picker",
-           "id": "image",
-           "label": "Image"
-         },
-         {
-           "type":"text",
-        "id":"textid",
-        "label":"textfield",
-        "default":"I am section"
-         }
-       ]
-     }
-  ],
-  "presets": [
-    {
-      "name": "nav-bar",
-      "settings": {
+        "name": "Slide",
+        "type": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }, {
+            "type": "text",
+            "id": "textid",
+            "label": "textfield",
+            "default": "I am section"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "nav-bar",
+        "settings": {
+          "title": "nav-bar"
+        },
+        "blocks": [
+          {
+            "type": "slide"
+          }, {
+            "type": "slide"
+          }
+        ]
+      }
+    ],
+    "locales": {
+      "en": {
         "title": "nav-bar"
       },
-      "blocks": [
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        }
-      ]
-    }
-  ],
-  "locales": {
-    "en": {
-      "title": "nav-bar"
+      "fr": {
+        "title": "Diaporama"
+      }
     },
-    "fr": {
-      "title": "Diaporama"
+    "enabled_on": {
+      "groups": ["header"]
     }
-  },
-  "enabled_on": {
-    "groups": ["header"]
   }
-}
 {% endschema %}
 
 {% stylesheet %}
-        .slider-block{
-          max-width: var(--page-width);
-          margin: 20px auto;
-          position: relative;
-        }
-   .slick-slider {
-         position: unset !important;
-   }
+  
 
-  .slick-slider .slick-track{
-      display: flex;
-     align-items: center;
-     justify-content: center;
-     gap: 20px;
-
-   }
-  .card-slider{
-
-  }
-
-     @charset 'UTF-8';
-     /* Slider */
-     .slick-loading .slick-list
-     {
-         background: #fff url('./ajax-loader.gif') center center no-repeat;
-     }
-
-     /* Icons */
-     @font-face
-     {
-         font-family: 'slick';
-         font-weight: normal;
-         font-style: normal;
-     }
-     /* Arrows */
-     .slick-prev,
-     .slick-next
-     {
-         font-size: 0;
-         line-height: 0;
-         position: absolute;
-         top: 20px;
-         display: block;
-         width: 40px;
-         height: 40px;
-         padding: 0;
-         -webkit-transform: translate(0, -50%);
-         -ms-transform: translate(0, -50%);
-         transform: translate(0, -50%);
-         cursor: pointer;
-         color: transparent;
-         border: none;
-         outline: none;
-         background: transparent;
-     }
-     .slick-prev:hover,
-     .slick-prev:focus,
-     .slick-next:hover,
-     .slick-next:focus
-     {
-         color: transparent;
-         outline: none;
-         background: transparent;
-     }
-     .slick-prev:hover:before,
-     .slick-prev:focus:before,
-     .slick-next:hover:before,
-     .slick-next:focus:before
-     {
-         opacity: 1;
-     }
-     .slick-prev.slick-disabled:before,
-     .slick-next.slick-disabled:before
-     {
-         opacity:0.8;
-     }
-
-     .slick-prev:before,
-     .slick-next:before
-     {
-         font-family: 'slick';
-         font-size: 40px;
-         line-height: 1;
-         color: black;
-
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
-     }
-
-     .slick-prev
-     {
-       right: 50px;
-     }
-     [dir='rtl'] .slick-prev
-     {
-         right: -25px;
-         left: auto;
-     }
-     .slick-prev:before
-     {
-         content: '<';
-     }
-     [dir='rtl'] .slick-prev:before
-     {
-         content: '>';
-     }
-
-     .slick-next
-     {
-         right:0px;
-     }
-     [dir='rtl'] .slick-next
-     {
-         right: auto;
-         left: -25px;
-     }
-     .slick-next:before
-     {
-         content: '>';
-     }
-     [dir='rtl'] .slick-next:before
-     {
-         content: '<';
-     }
-
-     /* Dots */
-     .slick-dotted.slick-slider
-     {
-         margin-bottom: 30px;
-     }
-
-     .slick-dots
-     {
-         position: absolute;
-         bottom: -25px;
-         display: block;
-         width: 100%;
-         padding: 0;
-         margin: 0;
-
-         list-style: none;
-
-         text-align: center;
-     }
-     .slick-dots li
-     {
-         position: relative;
-         display: inline-block;
-         width: 20px;
-         height: 20px;
-         margin: 0 5px;
-         padding: 0;
-
-         cursor: pointer;
-     }
-     .slick-dots li button
-     {
-         font-size: 0;
-         line-height: 0;
-
-         display: block;
-
-         width: 20px;
-         height: 20px;
-         padding: 5px;
-
-         cursor: pointer;
-
-         color: transparent;
-         border: 0;
-         outline: none;
-         background: transparent;
-     }
-     .slick-dots li button:hover,
-     .slick-dots li button:focus
-     {
-         outline: none;
-     }
-     .slick-dots li button:hover:before,
-     .slick-dots li button:focus:before
-     {
-         opacity: 1;
-     }
-     .slick-dots li button:before
-     {
-         font-family: 'slick';
-         font-size: 6px;
-         line-height: 20px;
-
-         position: absolute;
-         top: 0;
-         left: 0;
-
-         width: 20px;
-         height: 20px;
-
-         content: '•';
-         text-align: center;
-
-         opacity: .25;
-         color: black;
-
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
-     }
-     .slick-dots li.slick-active button:before
-     {
-         opacity: .75;
-         color: black;
-     }
 {% endstylesheet %}
 
 {% javascript %}
-  /*Slider function [It is recommended to place a function in a separate JS file, such as "functions.js"]*/
-  function myCoolSlider() {
-          $('.card-slider-track').slick({
-              dots: false,
-              infinite: false,
-              arrows:true,
-              speed:250,
-              slidesToShow: 5,
-              slidesToScroll: 1,
-              responsive: [{
-                  breakpoint: 1200,
-                  settings: {
-                      slidesToShow: 4,
-                      slidesToScroll: 1,
-                      infinite: false,
-                      dots: false
-                  }
-              }, {
-                  breakpoint: 992,
-                  settings: {
-                      slidesToShow: 3,
-                      slidesToScroll: 1
-                  }
-              }, {
-                  breakpoint: 768,
-                  settings: {
-                      slidesToShow: 2,
-                      slidesToScroll: 1
-                  }
-              }, {
-                  breakpoint: 480,
-                  settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1
-                  }
-              }]
-          });
-      }
-      /*End of Slider function*/
 
 
-
-  $(document).ready(function() {
-  /*Calling the function [It is recommended to call a function in a separate JS file, such as "scripts.js"]*/
-      myCoolSlider();
-  /*.................End of call*/
-  });
 {% endjavascript %}

@@ -116,8 +116,8 @@
         }
    .slick-slider {
          position: unset !important;
+       
    }
-
   .slick-slider .slick-track{
       display: flex;
      align-items: center;
@@ -125,10 +125,12 @@
      gap: 20px;
 
    }
-  .card-slider{
-
+  .card-slider:hover {
+   scale:1.05;
   }
-
+  .card-slider{
+    transition: 0.3s;
+  }
      @charset 'UTF-8';
      /* Slider */
      .slick-loading .slick-list
